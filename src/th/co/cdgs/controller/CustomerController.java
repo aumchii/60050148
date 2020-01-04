@@ -57,6 +57,7 @@ public class CustomerController {
 		
 		//close connection 
 		}finally {
+			//cos at the begin we set rs= null
 			if (rs != null) {
 				
 				try {
@@ -82,6 +83,7 @@ public class CustomerController {
 		}
 		return Response.ok().entity(list).build();
 	}
+	
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
